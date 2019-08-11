@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">QR Code</string>
+    <string name="create_qr_code">Create QR Code</string>
+    <string name="scan_qr_code">Scan QR Code</string>
+    <string name="save">Save</string>
+    <string name="create">Create</string>
+    <string name="content_of_qr_code">content of qr code</string>
+    <string name="qr_code">qr code</string>
+</resources>
