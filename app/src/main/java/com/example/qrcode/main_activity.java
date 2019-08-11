@@ -10,8 +10,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class main_activity extends AppCompatActivity {
 
-    // TODO: 09-Aug-19 check the ram and cpu usage of the app at various activities
-
     Button createButton;
     Button scanButton;
     @Override
