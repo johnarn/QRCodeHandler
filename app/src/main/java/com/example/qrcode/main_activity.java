@@ -12,6 +12,7 @@ public class main_activity extends AppCompatActivity {
 
     Button createButton;
     Button scanButton;
+    Button importButton;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +21,7 @@ public class main_activity extends AppCompatActivity {
 
         createButton = (Button) findViewById(R.id.createButton);
         scanButton = (Button) findViewById(R.id.scanButton);
+        importButton = (Button) findViewById(R.id.importButton);
 
         createButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,6 +33,12 @@ public class main_activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(main_activity.this, scan_qr_code_activity.class));
+            }
+        });
+        importButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(main_activity.this, import_qr_code_activity.class));
             }
         });
 
