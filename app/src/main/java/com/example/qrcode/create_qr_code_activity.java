@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.Point;
+import android.media.MediaScannerConnection;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
@@ -22,9 +23,14 @@ import androidx.core.app.ActivityCompat;
 
 import com.google.zxing.WriterException;
 
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.Calendar;
+
 import androidmads.library.qrgenearator.QRGContents;
 import androidmads.library.qrgenearator.QRGEncoder;
-import androidmads.library.qrgenearator.QRGSaver;
 
 public class create_qr_code_activity extends AppCompatActivity {
 
@@ -87,8 +93,8 @@ public class create_qr_code_activity extends AppCompatActivity {
                 String result;
                 try {
                     requestPermission();
-                    save = QRGSaver.save(savePath, edtValue.getText().toString().trim(), bitmap, QRGContents.ImageType.IMAGE_JPEG);
-                    System.out.println(save);
+                    save = saveImage(bitmap);
+
                     result = save ? "Image Saved" : "Image Not Saved";
                     Toast.makeText(getApplicationContext(), result, Toast.LENGTH_LONG).show();
                 } catch (Exception e) {
@@ -97,6 +103,38 @@ public class create_qr_code_activity extends AppCompatActivity {
             }
         });
 
+
+    }
+
+    public boolean saveImage(Bitmap myBitmap) {
+        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+        myBitmap.compress(Bitmap.CompressFormat.JPEG, 90, bytes);
+        File wallpaperDirectory = new File(
+                Environment.getExternalStorageDirectory() + "/QRCode/");
+        // have the object build the directory structure, if needed.
+
+        if (!wallpaperDirectory.exists()) {
+            Log.d("dirrrrrr", "" + wallpaperDirectory.mkdirs());
+            wallpaperDirectory.mkdirs();
+        }
+
+        try {
+            File f = new File(wallpaperDirectory, Calendar.getInstance()
+                    .getTimeInMillis() + ".jpg");
+            f.createNewFile();   //give read write permission
+            FileOutputStream fo = new FileOutputStream(f);
+            fo.write(bytes.toByteArray());
+            MediaScannerConnection.scanFile(this,
+                    new String[]{f.getPath()},
+                    new String[]{"image/jpeg"}, null);
+            fo.close();
+            Log.d("TAG", "File Saved::--->" + f.getAbsolutePath());
+
+            return true;
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+        return false;
 
     }
 
