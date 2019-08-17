@@ -12,8 +12,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.zxing.BinaryBitmap;
 import com.google.zxing.MultiFormatReader;
 import com.google.zxing.NotFoundException;
@@ -22,13 +24,9 @@ import com.google.zxing.Result;
 import com.google.zxing.common.HybridBinarizer;
 
 /**
- *
- *
  * Import QR Code Activity
- *
+ * <p>
  * Activity for importing existing QR Code from the gallery of the phone
- *
- *
  */
 public class import_qr_code_activity extends AppCompatActivity {
 
@@ -86,7 +84,7 @@ public class import_qr_code_activity extends AppCompatActivity {
              * Find the URI of the image that the user has selected
              */
             Uri selectedImage = data.getData();
-            String[] filePathColumn = { MediaStore.Images.Media.DATA };
+            String[] filePathColumn = {MediaStore.Images.Media.DATA};
 
             /*
              * Create a cursor to access the image that the user has selected
@@ -137,7 +135,7 @@ public class import_qr_code_activity extends AppCompatActivity {
             RGBLuminanceSource source = new RGBLuminanceSource(width, height, pixels);
             BinaryBitmap bBitmap = new BinaryBitmap(new HybridBinarizer(source));
             MultiFormatReader reader = new MultiFormatReader();
-            try{
+            try {
                 /*
                  * Get the result of the binary bitmap to show to the user
                  */
@@ -147,15 +145,14 @@ public class import_qr_code_activity extends AppCompatActivity {
                  * Set the text of the bitmap to the textView
                  */
                 textView.setText(result.toString());
-            }
-            catch (NotFoundException e){
+            } catch (NotFoundException e) {
                 e.printStackTrace();
             }
-        }else {
+        } else {
             /*
              * If anything goes wrong inform the user
              */
-            Toast.makeText(import_qr_code_activity.this, "You haven't picked Image",Toast.LENGTH_LONG).show();
+            Toast.makeText(import_qr_code_activity.this, "You haven't picked Image", Toast.LENGTH_LONG).show();
         }
     }
 
