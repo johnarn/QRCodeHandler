@@ -52,7 +52,7 @@ Set up your device as follows:
 ```
 The MIT License (MIT)
 
-Copyright (c) 2019 AndroidMad / Mushtaq M A
+Copyright (c) 2019 
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
