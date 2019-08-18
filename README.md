@@ -40,7 +40,7 @@ Set up your device as follows:
    
  3. Run the app on your device as follows:
     
-    * In Android Studio, click the **app** module in the **Project** window and then select **Rub > Run**.
+    * In Android Studio, click the **app** module in the **Project** window and then select **Run > Run**.
     
     * In the **Select Deployment Target** window, select your device, and click **OK**.
     
