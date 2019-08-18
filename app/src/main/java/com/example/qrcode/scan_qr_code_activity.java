@@ -124,6 +124,7 @@ public class scan_qr_code_activity extends AppCompatActivity {
                     textView.post(new Runnable() {
                         @Override
                         public void run() {
+
                             /*
                              * Vibrate the phone
                              */
@@ -134,13 +135,14 @@ public class scan_qr_code_activity extends AppCompatActivity {
                              * show the text of the QR Code to user
                              */
                             textView.setText(qrCodes.valueAt(0).displayValue);
-                            try {
-                                Thread.sleep(5000);
-                            } catch (InterruptedException e) {
-                                e.printStackTrace();
-                            }
+
                         }
                     });
+                    try {
+                        Thread.sleep(5000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
         });
