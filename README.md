@@ -2,16 +2,12 @@
 
 ## Introduction
 
-This projects aims to be a simple QR Code handler. The Android application can generate, scan or import a qr code and show the text that was made of.
+This projects aims to be a simple QR Code handler. QRCodeHandler can generate, scan or import a qr code and show the text that was made of. 
 
 ## Generate QR Code
 
 
-Android App that:
-  1. Generates a specific QR Code
-  2. Scans an existing QR Code with the phone's camera
-  3. Import from the phone's gallery a QR Code and show the text it was made of
-  
+
 ## License
 ```
 The MIT License (MIT)
