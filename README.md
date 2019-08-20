@@ -1,6 +1,6 @@
 # QRCodeHandler
 
-This projects aims to be a simple QR Code handler. QRCodeHandler can generate, scan or import a qr code and show the text that was made of. 
+This project aims to be a simple QR Code handler. QRCodeHandler can generate, scan or import a QR code and show the text that was made of. 
 
 ## Getting Started
 
@@ -8,7 +8,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Prerequisites
 
-What things you need to install the software and how to install them. Add the code below into your gradle app file.
+What things you need to install the software and how to install them. Add the code below into your Gradle app file.
 
 ```
 implementation 'com.google.android.gms:play-services-vision:x.y.z'
@@ -28,7 +28,7 @@ Set up your device as follows:
      
    * Open the **Settings** app.
    
-   * (Only on Anrdoid 8.0 or higher) Select **System**.
+   * (Only on Android 8.0 or higher) Select **System**.
    
    * Scroll to the bottom and select **About phone**.
    
@@ -72,3 +72,4 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
+
