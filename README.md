@@ -49,7 +49,7 @@ Set up your device as follows:
 
 ## Authors
 
-* [John Arnokouros](http://github.com/johnarn) - Initial work
+* [John Arnokouros](http://github.com/johnarn) - Initial work - johnarn@windowslive.com
 
 
 
