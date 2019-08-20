@@ -47,6 +47,11 @@ Set up your device as follows:
  Android Studio installs the app on your connected device and starts it.
 
 
+## Authors
+
+* [John Arnokouros](http://github.com/johnarn) - Initial work
+
+
 
 ## License
 ```
