@@ -4,9 +4,9 @@
     <string name="scan_qr_code">Scan QR Code</string>
     <string name="save">Save</string>
     <string name="create">Create</string>
-    <string name="content_of_qr_code">content of qr code</string>
+    <string name="content_of_qr_code">Content of QR Code</string>
     <string name="qr_code">qr code</string>
     <string name="import_qr_code">Import QR Code</string>
     <string name="select_image">Select Image</string>
-    <string name="focus_on_qr_code">Focus on QR code</string>
+    <string name="focus_on_qr_code">Focus on QR Code</string>
 </resources>
